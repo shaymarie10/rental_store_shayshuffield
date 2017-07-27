@@ -19,14 +19,14 @@ def replacement_value(rent):
     return rent 
 
 
-def deposit(rent):
+def deposit(cash):
     '''(float, float) -> (float) '''
-    return rent * 10
+    return cash * 10
 
 
-def total_cost(amount):
+def total_cost(rent, amount):
     '''(float, float) -> (float) '''
-    for item in amount:
+    for item in rent:
         amount = item[1] * .07
     
     
