@@ -8,7 +8,7 @@ def make_message():
         ['four bedroom', 4000],
         ['five bedroom', 5000],
         ]
-    expected = '''Welcome to California Rental Homes. We have several homes to choose from.
+    expected = '''Welcome to California Rental Homes. How many bedrooms are you looking for in a home?
 \t1. one bedroom
 \t2. two bedroom
 \t3. three bedroom

@@ -1,24 +1,17 @@
 import core, disk
 
 def main():
-    selection  = """
-            Welcome to California Rental Homes. Beautiful area and even better living quarters.
-What size home are you interested at looking at today?
-
-1. one bedroom(1000)
-2. two bedroom(2000)
-3. three bedroom(3000)
-4. four bedroom(4000)
-5. five bedroom(5000)
-"""
-
+    selection  = core.make_message()
+    rent = disk.make_inventory()
+    monthly = core.get_monthly_rent(rent)
+    rent = core.replacement_value(rent)
 
     rent = ''
     total_amount = 0
     while rent != 'Q'.upper():
         rent = input(selection)
         if rent == '1':
-            amount = int(input('\nOur one bedroom houses are 1000 for monthly rent. Deposits are half the cost of the rent\n'))
+            amount = int(input('\nOur one bedroom houses are 1000 for monthly rent. Is this a finicially possible for you?\n'))
             total_amount += core.total_cost(rent, amount *.07)
             print('You have purchased', amount, 'house. Your total will be $' + str(core.total_cost(rent, amount)))
         if rent == '2':

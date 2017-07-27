@@ -1,6 +1,6 @@
-bedrooms, monthly_rent, quantity, deposit, replacement 
-one bedroom, 1000, 100, x, 125,000
-two bedroom, 2000, 100, x, 150,000
-three bedroom, 3000, 100, x, 180,000
-four bedroom, 4000, 100, x, 200,000
-five bedroom, 5000, 100, x, 400,000
+bedrooms, monthly_rent, quantity
+one bedroom, 1000, 100
+two bedroom, 2000, 100
+three bedroom, 3000, 100
+four bedroom, 4000, 100
+five bedroom, 5000, 100 
