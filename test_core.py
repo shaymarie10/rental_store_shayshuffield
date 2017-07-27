@@ -1,6 +1,6 @@
 import core
 
-def make_message():
+def test_make_message():
     inventory = [
         ['one bedroom', 1000],
         ['two bedroom', 2000 ],
@@ -8,13 +8,33 @@ def make_message():
         ['four bedroom', 4000],
         ['five bedroom', 5000],
         ]
-    expected = '''Welcome to California Rental Homes. How many bedrooms are you looking for in a home?
-\t1. one bedroom
-\t2. two bedroom
-\t3. three bedroom
-\t4. four bedroom
-\t5. five bedroom
-'''
-    assert core.make_message(inventory) == expected
+    expected = '''How many bedrooms are you looking for in a home?'''
+    assert core.make_message() == expected
+
+def test_get_monthly_rent():
+    inventory = [
+         ['one bedroom', 1000],
+        ['two bedroom', 2000 ],
+        ['three bedroom', 3000],
+        ['four bedroom', 4000],
+        ['five bedroom', 5000],
+        ]
+    expected = [1000, 2000, 3000, 4000, 5000]
     
+    assert core.get_monthly_rent(inventory) == expected
+    
+
+def test_replacement_value():
+    inventory = [
+        ['one bedroom', 1000],
+        ['two bedroom', 2000 ],
+        ['three bedroom', 3000],
+        ['four bedroom', 4000],
+        ['five bedroom', 5000],
+        ]
+    expected = inventory * 10
+
+    assert core.replacement_value(inventory) == expected 
+
+
 

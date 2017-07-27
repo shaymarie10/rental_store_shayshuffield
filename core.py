@@ -1,6 +1,7 @@
 def make_message():
     """ [[str, str, float, float]] -> str """
-    msg = 'Welcome to California Rentals. How many bedrooms are you looking for in a home?\n'
+    print('Welcome to California Rentals.')
+    msg = 'How many bedrooms are you looking for in a home?'
     return msg
 
 def get_monthly_rent(rent):
@@ -12,10 +13,18 @@ def get_monthly_rent(rent):
     return cash
 
 def replacement_value(rent):
-    '''int, float) -> (float)'''
+    '''(int, float) -> (float)'''
     for item in rent:
         rent = item[1] * 10
-    return rent
+    return rent 
+
+
+def deposit(replacement):
+    '''(list, int) -> (int) '''
+    
+
+
+    
 
 
 
@@ -23,20 +32,6 @@ def replacement_value(rent):
 
 
 
-
-def refill():
-    str_l = ['type, amount_in_tank, price']
-    left = in_the_tank()
-    for item in left:
-        if item[1] < 5000.0:
-            item[1] = 5000.0
-        item[1]=str(item[1])
-        item[2]=str(item[2])
-        str_l.append(', '.join(item))
-        message = '\n'.join(str_l)
-
-    with open('tank.txt', 'w') as file:
-        file.write(message) 
 
 def deposit(replacement):
     '''(List, int) -> (int)
@@ -50,6 +45,11 @@ def deposit(replacement):
     ]
     replacement = amount 
     replacement * .10 == deposit 
+
+
+def sales_tax(tax):
+    '''(List, float) -> (float)'''
+
 
 
 
