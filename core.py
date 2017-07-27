@@ -15,12 +15,20 @@ def get_monthly_rent(rent):
 def replacement_value(rent):
     '''(int, float) -> (float)'''
     for item in rent:
-        rent = item[1] * 10
+        rent = item[1] * .10
     return rent 
 
 
-def deposit(replacement):
-    '''(list, int) -> (int) '''
+def deposit(rent):
+    '''(float, float) -> (float) '''
+    return rent * 10
+
+
+def total_cost(amount):
+    '''(float, float) -> (float) '''
+    for item in amount:
+        amount = item[1] * .07
+    
     
 
 
@@ -30,41 +38,24 @@ def deposit(replacement):
 
 
 
-
-
-
-def deposit(replacement):
-    '''(List, int) -> (int)
-    '''
-    amount = [
-        ['one_bedroom', 1000],
-        ['two_bedroom', 2000],
-        ['three_bedroom', 3000],
-        ['four_bedroom', 4000],
-        ['five_bedroom', 5000]
-    ]
-    replacement = amount 
-    replacement * .10 == deposit 
-
-
-def sales_tax(tax):
-    '''(List, float) -> (float)'''
+# def sales_tax(tax):
+#     '''(List, float) -> (float)'''
 
 
 
 
 
-#Sales Tax
-    if rent == '1':
-        return float(round(one_bedroom * amount, 2))
-    if rent == '2':
-        return float(round(two_bedroom * amount, 2))
-    if rent == '3':
-        return float(round(three_bedroom * amount, 2))
-    if rent == '4':
-        return float(round(four_bedroom* amount, 2))
-    if rent == '5':
-        return float(round(five_bedroom * amount, 2))
+# #Sales Tax
+#     if rent == '1':
+#         return float(round(one_bedroom * amount, 2))
+#     if rent == '2':
+#         return float(round(two_bedroom * amount, 2))
+#     if rent == '3':
+#         return float(round(three_bedroom * amount, 2))
+#     if rent == '4':
+#         return float(round(four_bedroom* amount, 2))
+#     if rent == '5':
+#         return float(round(five_bedroom * amount, 2))
 
 
 

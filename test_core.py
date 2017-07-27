@@ -32,8 +32,13 @@ def test_replacement_value():
         ['four bedroom', 4000],
         ['five bedroom', 5000],
         ]
-    expected = inventory * 10
-
+    expected = [
+        ['one bedroom', 10000],
+        ['two bedroom', 20000 ],
+        ['three bedroom', 30000],
+        ['four bedroom', 40000],
+        ['five bedroom', 50000],
+        ]
     assert core.replacement_value(inventory) == expected 
 
 
