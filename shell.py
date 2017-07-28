@@ -22,12 +22,13 @@ def decision():
 
 
 def main():
-    selection  = make_message()
+    selection  = make_message() 
     yes_no = if_price_is_right(selection)
     statement = decision()
     inv = disk.make_inventory()
     monthly = core.get_monthly_rent(inv)
     replace = core.replacement_value(inv)
+    dollars = core.cost(replace)
     deposit = core.deposit(replace)
 
     

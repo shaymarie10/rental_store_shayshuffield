@@ -15,15 +15,13 @@ def test_get_monthly_rent():
     
 
 def test_replacement_value():
-    item = ['one bedroom', 1000]
-    expected = 10000
+    assert core.cost(1000) == 10000
 
-    assert core.replacement_value(item) == expected 
 
 def test_deposit():
     assert core.deposit(1000) == 100
 
-def test_sales_tax(amount):
+def test_sales_tax():
     assert core.sales_tax(1000) == 70
 
 
