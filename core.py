@@ -28,8 +28,6 @@ def total_cost(rent, amount):
     '''(float, float) -> (float) '''
     for item in rent:
         amount = item[1] * .07
-    
-    
 
 
     

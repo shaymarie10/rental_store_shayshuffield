@@ -41,5 +41,13 @@ def test_replacement_value():
         ]
     assert core.replacement_value(inventory) == expected 
 
+def test_deposit():
+    inventory = [
+        [replacement_value]
+        ]
+    expected = inventory * .10
+    
+    assert core.deposit(inventory) == expected 
+
 
 
