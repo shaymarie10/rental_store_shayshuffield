@@ -1,6 +1,6 @@
 bedrooms, monthly_rent, quantity
-one bedroom, 1000, 100
-two bedroom, 2000, 100
-three bedroom, 3000, 100
-four bedroom, 4000, 100
-five bedroom, 5000, 100 
+1 bedroom, 1000, 100
+2 bedroom, 2000, 100
+3 bedroom, 3000, 100
+4 bedroom, 4000, 100
+5 bedroom, 5000, 100 
