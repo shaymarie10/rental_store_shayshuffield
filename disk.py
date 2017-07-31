@@ -15,3 +15,6 @@ def price(selection):
     for item in price:
         if item[0].startswith(selection):
             return item
+
+
+    

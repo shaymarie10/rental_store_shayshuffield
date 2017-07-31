@@ -1,20 +1,10 @@
 import core
 
 
-def test_get_monthly_rent():
-    inventory = [
-         ['one bedroom', 1000],
-        ['two bedroom', 2000 ],
-        ['three bedroom', 3000],
-        ['four bedroom', 4000],
-        ['five bedroom', 5000],
-        ]
-    expected = [1000, 2000, 3000, 4000, 5000]
-    
-    assert core.get_monthly_rent(inventory) == expected
+
     
 
-def test_replacement_value():
+def test_cost():
     assert core.cost(1000) == 10000
 
 
