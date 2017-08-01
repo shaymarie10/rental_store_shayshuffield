@@ -44,6 +44,29 @@ def take_away(selection, inventory):
     return msg
 
 
+def rental_return():
+    str_l = ['bedrooms, monthly_rent, quantity, cost']
+    for item in inventory:
+        if item[0] == decision:
+            item[2] = int(item[2]) + quantity
+        str_l.append('{}, {}, {}, {}'.format(str(item[0]), str(item[1]), str(item[2]), str(item[3])))
+        inventory = '\n'.join(str_l)
+    return inventory 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

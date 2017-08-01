@@ -20,3 +20,10 @@ def change_inventory(selection, quantity):
     with open('inventory.txt', 'w') as file:
         file.write(selection)
     return True 
+
+def decide(inventory, selection):
+    right = price(selection)
+    for item in inventory:
+            if item == right:
+                item[2] -1
+            return item 
