@@ -16,7 +16,7 @@ def price(selection):
         if item[0].startswith(selection):
             return item
 
-def change_inventory(selection):
+def change_inventory(selection, quantity):
     with open('inventory.txt', 'w') as file:
         file.write(selection)
     return True 

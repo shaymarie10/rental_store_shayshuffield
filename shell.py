@@ -18,8 +18,12 @@ def decision(yes_no, selection, sale_tax, dollars):
     elif yes_no == 'yes':
         input('The total sales tax for a ' + str(selection) + ' bedroom house is ' + str(sale_tax) + ' dollars. Push enter to continue ')
         print('Please take note that we have a replacement policy. Our ' + str(selection) + ' bedroom houses are ' + str(dollars) + ' if destruction occurs. ')
-        
-
+    
+    
+def take_away_detailed():
+    bedrooms.disk.price(selection)
+    bedrooms == selection
+    return selection - quantity
 
 
 
@@ -32,8 +36,10 @@ def main():
     deposit = core.deposit(prices)
     dollars = core.cost(prices)
     statement = decision(yes_no, selection, sale_tax, dollars)
+    
     selection = core.take_away(selection, inventory)
-    disk.change_inventory(selection)
+    quantity = old_quantity - 1
+    disk.change_inventory(selection, quantity)
 
     
 

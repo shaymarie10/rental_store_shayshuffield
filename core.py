@@ -10,7 +10,10 @@ def deposit(prices):
 
 
 def sales_tax(prices):
-    '''(inventory, item) -> (float) '''
+    '''(inventory, item) -> (float)
+    >>>  sales_tax(1000)
+    70
+     '''
     amount = prices[1] * .07
     return amount
 
@@ -35,7 +38,7 @@ def take_away(selection, inventory):
     str_l = ['bedrooms, monthly_rent, quantity, cost']
     for item in inventory:
         if item[0] == selection:
-            item[2] == int(item[2]) - msg
+            item[2] == int(item[0]) - int(item[2])
         str_l.append('{}, {}, {}, {}'.format(str(item[0]), str(item[1]), str(item[2]), str(item[3])))
         msg = '\n'.join(str_l)
     return msg
