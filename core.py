@@ -2,8 +2,10 @@
 
 
 def deposit(prices):
-    '''(inventory, item) -> (float) '''
-    amount = prices[1] * .10
+    '''(inventory, item) -> (float) 
+    the variable 3 is associated in inventory as the cost of replacement. The deposit is 10% of replacement value.
+    '''
+    amount = prices[3] * .10
     return amount
 
 
@@ -12,17 +14,31 @@ def sales_tax(prices):
     amount = prices[1] * .07
     return amount
 
-def cost(deposit: float) -> float:
-    '''Float -> Float
+
+
+
+def cost(prices):
+    '''List -> Float
 
     Returns the total cost of an item with the provided replacement value.
 
-    >>> cost(100)
-    1000
-    >>> cost(1000)
-    10000
+    >>> cost [2000]
+    4000
+    >>> cost [4000]
+    16000
     '''
-    return int(deposit) * 10
+    amount = prices[1] * 4
+    return amount
+
+
+def take_away(selection, inventory):
+    str_l = ['bedrooms, monthly_rent, quantity, cost']
+    for item in inventory:
+        if item[0] == selection:
+            item[2] == int(item[2]) - msg
+        str_l.append('{}, {}, {}, {}'.format(str(item[0]), str(item[1]), str(item[2]), str(item[3])))
+        msg = '\n'.join(str_l)
+    return msg
 
 
 

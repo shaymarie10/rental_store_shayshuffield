@@ -7,7 +7,7 @@ def make_inventory():
         lines = file.readlines()
     for line in lines:
         split_string = line.strip().split(', ')
-        left.append([split_string[0], float(split_string[1]), float(split_string[2])])
+        left.append([split_string[0], float(split_string[1]), float(split_string[2]), float(split_string[3])])
     return left
 
 def price(selection):
@@ -16,5 +16,7 @@ def price(selection):
         if item[0].startswith(selection):
             return item
 
-
-    
+def change_inventory(selection):
+    with open('inventory.txt', 'w') as file:
+        file.write(selection)
+    return True 

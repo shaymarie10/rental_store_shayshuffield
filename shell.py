@@ -24,13 +24,16 @@ def decision(yes_no, selection, sale_tax, dollars):
 
 
 def main():
+    inventory = disk.make_inventory()
     selection  = make_message() 
     yes_no = if_price_is_right(selection)
     prices = disk.price(selection)
     sale_tax = core.sales_tax(prices)
     deposit = core.deposit(prices)
-    dollars = core.cost(deposit)
+    dollars = core.cost(prices)
     statement = decision(yes_no, selection, sale_tax, dollars)
+    selection = core.take_away(selection, inventory)
+    disk.change_inventory(selection)
 
     
 
