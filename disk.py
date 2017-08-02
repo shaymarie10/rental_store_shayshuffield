@@ -10,20 +10,14 @@ def make_inventory():
         left.append([split_string[0], float(split_string[1]), float(split_string[2]), float(split_string[3])])
     return left
 
-def price(selection):
+def item(selection):
     price = make_inventory()
     for item in price:
-        if item[0].startswith(selection):
+        if item[0].startswith(selection): 
             return item
 
-def change_inventory(selection, quantity):
+def change_inventory(select):
     with open('inventory.txt', 'w') as file:
-        file.write(selection)
+        file.write(select)
     return True 
-
-def decide(inventory, selection):
-    right = price(selection)
-    for item in inventory:
-            if item == right:
-                item[2] -1
-            return item 
+     

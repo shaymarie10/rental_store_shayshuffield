@@ -5,7 +5,7 @@ def deposit(prices):
     '''(inventory, item) -> (float) 
     the variable 3 is associated in inventory as the cost of replacement. The deposit is 10% of replacement value.
     '''
-    amount = prices[3] * .10
+    amount = float(prices[3]) * .10
     return amount
 
 
@@ -14,7 +14,7 @@ def sales_tax(prices):
     >>>  sales_tax(1000)
     70
      '''
-    amount = prices[1] * .07
+    amount = float(prices[1]) * .07
     return amount
 
 
@@ -35,22 +35,23 @@ def cost(prices):
 
 
 def take_away(selection, inventory):
+    ''' str, [str] -> [inventory] '''
+    for item in inventory:
+        if item[0] == selection:
+            item[2] = (item[2]) - 1
+    return item
+
+
+def rental_return(inventory, selection, quantity):
+    ''' (int) -> float
+    return total rented item to inventory.
+    '''
     str_l = ['bedrooms, monthly_rent, quantity, cost']
     for item in inventory:
         if item[0] == selection:
-            item[2] == int(item[0]) - int(item[2])
-        str_l.append('{}, {}, {}, {}'.format(str(item[0]), str(item[1]), str(item[2]), str(item[3])))
-        msg = '\n'.join(str_l)
-    return msg
-
-
-def rental_return():
-    str_l = ['bedrooms, monthly_rent, quantity, cost']
-    for item in inventory:
-        if item[0] == decision:
-            item[2] = int(item[2]) + quantity
-        str_l.append('{}, {}, {}, {}'.format(str(item[0]), str(item[1]), str(item[2]), str(item[3])))
-        inventory = '\n'.join(str_l)
+            item[2] = quantity
+        str_l.append('{}, {}, {}, {}'.format(item[0], item[1], item[2], item[3]))
+    inventory = '\n'.join(str_l)
     return inventory 
         
 

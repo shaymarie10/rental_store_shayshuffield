@@ -6,15 +6,13 @@ def make_message():
     msg = input('How many bedrooms are you looking for in a home?')
     return msg
 
-def return_rental():
-    print('')
 
 def if_price_is_right(selection):
     ''' string -> int '''
-    right = disk.price(selection)
-    if msg = input('Our '+ str(right[0])+' houses are '+ str(right[1])+ ' for monthly rent. Is this finicially possible for you?')
+    right = disk.item(selection)
+    msg = input('Our '+ str(right[0]) +' houses are ' + str(right[1]) + ' for monthly rent. Is this finicially possible for you?')
     return msg
-    
+
 
 def decision(yes_no, selection, sale_tax, dollars):
     if yes_no == 'no':
@@ -30,16 +28,16 @@ def main():
     inventory = disk.make_inventory()
     selection  = make_message() 
     yes_no = if_price_is_right(selection)
-    prices = disk.price(selection)
+    prices = disk.item(selection)
     sale_tax = core.sales_tax(prices)
     deposit = core.deposit(prices)
     dollars = core.cost(prices)
     statement = decision(yes_no, selection, sale_tax, dollars)
-    selection = core.take_away(selection, inventory)
-    selection = core.rental_return()
-    old_quantity = disk.decide(inventory, selection)
-    quantity = old_quantity
-    disk.change_inventory(selection, quantity)
+    inven = core.take_away(selection, inventory)
+    old_quantity = disk.item(selection)[2]
+    quantity = old_quantity - 1
+    select = core.rental_return(inventory, selection, quantity)
+    disk.change_inventory(select)
 
     
 
